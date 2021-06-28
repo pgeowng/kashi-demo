@@ -113,4 +113,4 @@ const watch = () => {
 }
 exports.default = gulp.series(compile(), serve, watch);
 
-exports.publish = gulp.series(compile('/kashi'), serve)
+exports.publish = gulp.series(compile('/kashi-demo'), publish)
