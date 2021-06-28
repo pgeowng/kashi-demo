@@ -1,0 +1,13 @@
+doctype html
+html
+	include head.pug
+	+head('歌詞')
+	body
+		include header.pug
+		include aside.pug
+		main.index
+			section.recently
+				h2 Recently Added
+				ul
+					each  text,link in songs
+						li: a(href=link)= text

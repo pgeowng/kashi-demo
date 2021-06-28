@@ -1,0 +1,33 @@
+doctype html
+html
+	include head.pug
+	+head(title + ' - ' + artists.join(', '))
+
+	body
+		include header.pug
+		include aside.pug
+		main
+			section.desc
+				.desc-inner
+					.desc-row
+						div Title
+						div= title
+					.desc-row
+						div Artists
+						div
+							each i in artists
+								a.link.link-entry.link__broken(href='#')= i
+					.desc-row
+						div Albums
+						div
+							each i in albums
+								a.link.link-entry.link__broken(href='#')= i
+					.desc-row
+						div Track Number
+						div= number
+					.desc-row
+						div Tags
+						div
+							each i in tags
+								a.link.link-entry.link__broken(href='#')= i
+			section.lyrics= lyrics
